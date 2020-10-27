@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Village;
+use Illuminate\Support\Facades\DB;
 use Session;
 
 class VillagesController extends Controller
@@ -37,6 +38,10 @@ class VillagesController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'code' => 'required',
+            'name' => 'required'
+        ]);
         Village::create($request->all());
         Session::flash("notice", "Desa / Kelurahan Berhasil ditambahkan.");
         return redirect()->route("villages.index");
