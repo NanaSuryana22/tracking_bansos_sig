@@ -8,8 +8,8 @@
         Silahkan Inputkan Data Desa / Kelurahan
       </div>
       <div class="panel-body">
-      <form action="{{url('villages.store')}}" method="POST" role="form">
-        {{csrf_field()}}
+      <form action="{{ route('villages.store') }}" method="POST" role="form">
+        {{ csrf_field() }}
         <div class="form-group">
           <label for="code">Kode Desa / Kelurahan</label>
           <input class="form-control @error('code') is-invalid @enderror"

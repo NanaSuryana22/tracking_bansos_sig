@@ -1,5 +1,5 @@
 @extends("layouts.master")
-@section('titile', 'Desa / Kelurahan')
+@section('titile', 'Tracking Penerimaan Bansos Di Masyarakat')
 @section("content")
 <div class="row">
   <div class="col-md-12">
